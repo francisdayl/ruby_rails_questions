@@ -1,6 +1,5 @@
 # ruby_rails_questions
 
-
 ## Ruby questions
 
 #### 1. What is Ruby programming language?
