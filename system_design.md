@@ -884,123 +884,423 @@ A WebSocket is a continuous connection between client and server. That continuou
 - Built in support for re-connection and event-id
 - Simpler protocol
 - No trouble with corporate firewalls doing packet inspection
-### 91. 
+### 91. What is Pub/Sub?
 
-### 92. 
+Pub/Sub stands for “publish/subscribe.” It is a messaging pattern that allows for loose coupling between applications. With Pub/Sub, applications can subscribe to certain topics, and then receive messages only for those topics. This allows for a more flexible architecture, as applications can come and go without affecting the overall system.
 
-### 93. 
+### 92. Can you explain the basic concepts and components of a publish-subscribe system?
 
-### 94. 
+In a publish-subscribe system, there are three main components: publishers, subscribers, and a broker. Publishers are the ones who generate the content that is to be shared, subscribers are the ones who want to receive that content, and the broker is the one who manages the distribution of the content. 
 
-### 95. 
+### 93. What are some common use cases for Pub/Sub systems?
 
-### 96. 
+Some common use cases for Pub/Sub systems include social media applications, chat applications, and gaming applications.
 
-### 97. 
+### 94.  How does Pub/Sub differ from traditional request-response approaches to communication?
 
-### 98. 
+In a traditional request-response approach, a client sends a request to a server and then waits for a response. With Pub/Sub, the client subscribes to a topic and then receives messages as they are published, without having to send a request. This can be useful when you want to receive updates in real-time, without having to constantly send requests.
 
-### 99. 
+### 95. Is it possible for multiple subscribers to receive messages published by a single publisher in Pub/Sub? If yes, then how do publishers control who receives their message?
 
-### 100. 
+Yes, it is possible for multiple subscribers to receive messages published by a single publisher in Pub/Sub. Publishers can control who receives their message by specifying the topic that the message should be published to. Subscribers can then subscribe to the appropriate topic in order to receive the message.
 
-### 101. 
+### 96. What’s your opinion on using Pub/Sub when there are only two parties involved?
 
-### 102. 
+I believe that Pub/Sub can be beneficial even when there are only two parties involved. It can help to decouple the components of your system and make it easier to scale. Additionally, it can help to improve performance by reducing the number of dependencies between components.
 
-### 103. 
+### 97. Why would anyone choose Polling over Event-Driven Pub/Sub Systems?
 
-### 104. 
+Polling is a simple and straightforward way to check for new data. It can be easily implemented and does not require a lot of infrastructure. Event-driven pub/sub systems are more complex and can be more difficult to set up and maintain. However, they are more efficient and can scale better to handle large amounts of data.
 
-### 105. 
+### 98. What are some advantages of Pub/Sub over other architectural styles like RPC or REST?
 
-### 106. 
+Pub/Sub has a few advantages over other architectural styles. First, it allows for decoupling of components, so that components can communicate without needing to know about each other. Second, it can improve performance by reducing the number of messages that need to be sent. Finally, it can provide a more scalable solution since messages can be sent to multiple subscribers at once.
 
-### 107. 
+### 99. What is an event bus?
 
-### 108. 
+An event bus is a software architecture pattern that allows for loose coupling between software components by providing a central place for them to communicate. This communication is typically in the form of events, which can be emitted by one component and then received and handled by another. Event buses can be used to decouple components in a variety of different ways, making them very flexible.
 
-### 109. 
+### 100. What is the difference between topics and queues in Pub/Sub?
 
-### 110. 
+Topics are used for one-to-many communication, where messages are broadcast to all subscribers of the topic. Queues are used for one-to-one communication, where each message is delivered to a single subscriber.
 
-### 111. 
+### 101. What happens if no subscriber is available at the time of publishing?
 
-### 112. 
+If there are no subscribers available when a message is published, then the message will be lost.
 
-### 113. 
 
-### 114. 
+### 102. Can you give me some examples of use cases where a Pub/Sub architecture works well?
 
-### 115. 
+Pub/Sub is a great way to handle communication between different parts of a system where there are a lot of messages being sent and received. It can be used for things like chat applications, news feeds, or any other system where there are a lot of messages being exchanged.
 
-### 116. 
+### 103. Can you explain what asynchronous messaging is?
 
-### 117. 
+Asynchronous messaging is a method of communication between two or more parties in which the messages are not sent or received at the same time. This type of messaging can be useful when the parties are not able to communicate in real-time, or when the message sender does not need an immediate response from the message receiver.
 
-### 118. 
+### 104. What is the difference between synchronous and asychronous messaging models?
 
-### 119. 
+The synchronous messaging model is a one-to-one model where each message is sent from one sender to one receiver. The asynchronous messaging model is a one-to-many model where each message can be sent to multiple receivers.
 
-### 120. 
+### 105. What happens if a message fails to be delivered to one of its intended recipients?
 
-### 121. 
+If a message fails to be delivered to one of its intended recipients, then it will be placed in a dead letter queue. The message will remain in the dead letter queue until it is either delivered to the intended recipient or it expires.
 
-### 122. 
+### 106. What are durable and non-durable subscriptions?
 
-### 123. 
+A durable subscription is one where the messages are stored by the message broker until they are consumed, even if the consumer is not active at the time the message is published. A non-durable subscription is one where messages are only stored until they are consumed or until the message broker restarts, at which point they are lost.
 
-### 124. 
+### 107. Can you explain what dequeuing means in context with Pub/Sub?
 
-### 125. 
+Dequeuing is the process of removing messages from a queue. In the context of Pub/Sub, this would refer to removing messages from the message queue that have been published by the publisher and are awaiting processing by the subscriber.
 
-### 126. 
+### 108. What is Pub/Sub used for in cloud computing scenarios?
 
-### 127. 
+Pub/Sub is a messaging pattern that is often used in cloud computing scenarios. It allows for communication between different parts of a system, or between different systems, in a decoupled way. This means that each part of the system can subscribe to the messages that it is interested in, and does not need to be aware of the other parts of the system.
 
-### 128. 
+### 109.  How can you ensure that messages published through Pub/Sub are received by all subscribers?
 
-### 129. 
+There are a few ways to ensure that messages published through Pub/Sub are received by all subscribers. One way is to use a message queue, which will hold onto messages until all subscribers have received them. Another way is to use a fan-out exchange, which will send a copy of the message to all subscribers.
 
-### 130. 
+### 110. What are Message queues
 
-### 131. 
+Message queues are a kind of messaging-oriented middleware where producers push new messages to a named First-In, First-Out (FIFO) queue, which consumers can then pull from.
 
-### 132. 
+Message queues are also called point-to-point messaging because there is a one-to-one relationship between a message’s producer and consumer. There can be many producers and consumers using the same queue, but any particular message will only have one producer and one consumer. 
 
-### 133. 
+### 111. What do you understand by RESTful Web Services?
 
-### 134. 
+RESTful web services are services that follow REST architecture. REST stands for Representational State Transfer and uses HTTP protocol (web protocol) for implementation. These services are lightweight, provide maintainability, scalability, support communication among multiple applications that are developed using different programming languages. They provide means of accessing resources present at server required for the client via the web browser by means of request headers, request body, response body, status codes, etc.
 
-### 135. 
 
-### 136. 
+### 112. What is a REST Resource?
 
-### 137. 
+Every content in the REST architecture is considered a resource. The resource is analogous to the object in the object-oriented programming world. They can either be represented as text files, HTML pages, images, or any other dynamic data.
 
-### 138. 
+    The REST Server provides access to these resources whereas the REST client consumes (accesses and modifies) these resources. Every resource is identified globally by means of a URI.
 
-### 139. 
 
-### 140. 
 
-### 141. 
+### 113. What is URI?
 
-### 142. 
+Uniform Resource Identifier is the full form of URI which is used for identifying each resource of the REST architecture. URI is of the format:
 
-### 143. 
+<protocol>://<service-name>/<ResourceType>/<ResourceID>
 
-### 144. 
 
-### 145. 
 
-### 146. 
 
-### 147. 
+### 114. Types of URI
 
-### 148. 
+There are 2 types of URI:
 
-### 149. 
+    URN: Uniform Resource Name identifies the resource by means of a name that is both unique and persistent.
+        URN doesn’t always specify where to locate the resource on the internet. They are used as templates that are used by other parsers to identify the resource.
+        These follow the urn scheme and usually prefixed with urn:. Examples include
+            urn:isbn:1234567890 is used for identification of book based on the ISBN number in a library application.
+            urn:mpeg:mpeg7:schema:2001 is the default namespace rules for metadata of MPEG-7 video.
+        Whenever a URN identifies a document, they are easily translated into a URL by using “resolver” after which the document can be downloaded.
+    URL: Uniform Resource Locator has the information regarding fetching of a resource from its location.
+        Examples include:
+            http://abc.com/samplePage.html
+            ftp://sampleServer.com/sampleFile.zip
+            file:///home/interviewbit/sampleFile.txt
+        URLs start with a protocol (like ftp, http etc) and they have the information of the network hostname (sampleServer.com) and the path to the document(/samplePage.html). It can also have query parameters.
+
+### 115. What are the features of RESTful Web Services?
+
+Every RESTful web service has the following features:
+
+    The service is based on the Client-Server model.
+    The service uses HTTP Protocol for fetching data/resources, query execution, or any other functions.
+    The medium of communication between the client and server is called “Messaging”.
+    Resources are accessible to the service by means of URIs.
+    It follows the statelessness concept where the client request and response are not dependent on others and thereby provides total assurance of getting the required data.
+    These services also use the concept of caching to minimize the server calls for the same type of repeated requests.
+    These services can also use SOAP services as implementation protocol to REST architectural pattern.
+
+
+
+### 116. What is the concept of statelessness in REST?
+
+The REST architecture is designed in such a way that the client state is not maintained on the server. This is known as statelessness. The context is provided by the client to the server using which the server processes the client’s request. The session on the server is identified by the session identifier sent by the client.
+
+### 117. What do you understand by JAX-RS?
+
+As the name itself stands (JAX-RS= Java API for RESTful Web Services) is a Java-based specification defined by JEE for the implementation of RESTful services. The JAX-RS library makes usage of annotations from Java 5 onwards to simplify the process of web services development. The latest version is 3.0 which was released in June 2020. This specification also provides necessary support to create REST clients.
+
+
+### 118. What are the HTTP Methods?
+
+HTTP Methods are also known as HTTP Verbs. They form a major portion of uniform interface restriction followed by the REST that specifies what action has to be followed to get the requested resource. Below are some examples of HTTP Methods:
+
+    GET: This is used for fetching details from the server and is basically a read-only operation.
+    POST: This method is used for the creation of new resources on the server.
+    PUT: This method is used to update the old/existing resource on the server or to replace the resource.
+    DELETE: This method is used to delete the resource on the server.
+    PATCH: This is used for modifying the resource on the server.
+    OPTIONS: This fetches the list of supported options of resources present on the server.
+
+The POST, GET, PUT, DELETE corresponds to the create, read, update, delete operations which are most commonly called CRUD Operations.
+
+### 119. Can you tell the disadvantages of RESTful web services?
+
+The disadvantages are:
+
+    As the services follow the idea of statelessness, it is not possible to maintain sessions. (Session simulation responsibility lies on the client-side to pass the session id)
+    REST does not impose security restrictions inherently. It inherits the security measures of the protocols implementing it. Hence, care must be chosen to implement security measures like integrating SSL/TLS based authentications, etc.
+
+
+
+### 120. Define Messaging in terms of RESTful web services.
+
+The technique of sending a message from the REST client to the REST server in the form of an HTTP request and the server responding back with the response as HTTP Response is called Messaging. The messages contained constitute the data and the metadata about the message.
+
+### 121. While creating URI for web services, what are the best practices that needs to be followed?
+
+Below is the list of best practices that need to be considered with designing URI for web services:
+
+    While defining resources, use plural nouns. Example: To identify user resource, use the name “users” for that resource.
+    While using the long name for resources, use underscore or hyphen. Avoid using spaces between words. For example, to define authorized users resource, the name can be “authorized_users” or “authorized-users”.
+    The URI is case-insensitive, but as part of best practice, it is recommended to use lower case only.
+    While developing URI, the backward compatibility must be maintained once it gets published. When the URI is updated, the older URI must be redirected to the new one using the HTTP status code 300.
+    Use appropriate HTTP methods like GET, PUT, DELETE, PATCH, etc. It is not needed or recommended to use these method names in the URI. Example: To get user details of a particular ID, use /users/{id} instead of /getUser
+    Use the technique of forward slashing to indicate the hierarchy between the resources and the collections. Example: To get the address of the user of a particular id, we can use: /users/{id}/address
+
+
+
+### 122. What are the best practices to develop RESTful web services?
+
+RESTful web services use REST API as means of implementation using the HTTP protocol. REST API is nothing but an application programming interface that follows REST architectural constraints such as statelessness, cacheability, maintainability, and scalability. It has become very popular among the developer community due to its simplicity. 
+
+### 123. Can you tell what constitutes the core components of HTTP Request?
+
+In REST, any HTTP Request has 5 main components, they are:
+
+    Method/Verb − This part tells what methods the request operation represents. Methods like GET, PUT, POST, DELETE, etc are some examples.
+    URI − This part is used for uniquely identifying the resources on the server.
+    HTTP Version − This part indicates what version of HTTP protocol you are using. An example can be HTTP v1.1.
+    Request Header − This part has the details of the request metadata such as client type, the content format supported, message format, cache settings, etc.
+    Request Body − This part represents the actual message content to be sent to the server.
+
+
+### 124. What constitutes the core components of HTTP Response?
+
+HTTP Response has 4 components:
+
+    Response Status Code − This represents the server response status code for the requested resource. Example- 400 represents a client-side error, 200 represents a successful response.
+    HTTP Version − Indicates the HTTP protocol version.
+    Response Header − This part has the metadata of the response message. Data can describe what is the content length, content type, response date, what is server type, etc.
+    Response Body − This part contains what is the actual resource/message returned from the server.
+
+
+### 125.  Define Addressing in terms of RESTful Web Services.
+
+Addressing is the process of locating a single/multiple resources that are present on the server. This task is accomplished by making use of URI (Uniform Resource Identifier). The general format of URI is 
+
+<protocol>://<application-name>/<type-of-resource>/<id-of-resource>
+
+
+
+### 126. What makes REST services to be easily scalable?
+
+REST services follow the concept of statelessness which essentially means no storing of any data across the requests on the server. This makes it easier to scale horizontally because the servers need not communicate much with each other while serving requests.
+
+
+### 127. Based on what factors, you can decide which type of web services you need to use - SOAP or REST?
+
+REST services have gained popularity due to the nature of simplicity, scalability, faster speed, improved performance, and multiple data format support. But, SOAP has its own advantages too. Developers use SOAP where the services require advanced security and reliability.
+
+Following are the questions you need to ask to help you decide which service can be used:
+
+    Do you want to expose resource data or business logic?
+        SOAP is commonly used for exposing business logic and REST for exposing data.
+    Does the client require a formal strict contract?
+        If yes, SOAP provides strict contracts by using WSDL. Hence, SOAP is preferred here.
+    Does your service require support for multiple formats of data?
+        If yes, REST supports multiple data formats which is why it is preferred in this case.
+    Does your service require AJAX call support?
+        If yes, REST can be used as it provides the XMLHttpRequest.
+    Does your service require both synchronous and asynchronous requests?
+        SOAP has support for both sync/async operations.
+        REST only supports synchronous calls.
+    Does your service require statelessness?
+        If yes, REST is suitable. If no, SOAP is preferred.
+    Does your service require a high-security level?
+        If yes, SOAP is preferred. REST inherits the security property based on the underlying implementation of the protocol. Hence, it can’t be preferred at all times.
+    Does your service require support for transactions?
+        If yes, SOAP is preferred as it is good in providing advanced support for transaction management.
+    What is the bandwidth/resource required?
+        SOAP involves a lot of overhead while sending and receiving XML data, hence it consumes a lot of bandwidth.
+        REST makes use of less bandwidth for data transmission.
+    Do you want services that are easy to develop, test, and maintain frequently?
+        REST is known for simplicity, hence it is preferred.
+
+
+
+### 128. Can we implement transport layer security (TLS) in REST?
+
+Yes, we can. TLS does the task of encrypting the communication between the REST client and the server and provides the means to authenticate the server to the client. It is used for secure communication as it is the successor of the Secure Socket Layer (SSL). HTTPS works well with both TLS and SSL thereby making it effective while implementing RESTful web services. One point to mention here is, the REST inherits the property of the protocol it implements. So security measures are dependent on the protocol REST implements.
+
+
+### 129. Should we make the resources thread safe explicitly if they are made to share across multiple clients?
+
+There is no need to explicitly making the resources thread-safe because, upon every request, new resource instances are created which makes them thread-safe by default.
+
+
+### 130. What is Payload in terms of RESTful web services?
+
+Payload refers to the data passes in the request body. It is not the same as the request parameters. The payload can be sent only in POST methods as part of the request body.
+
+
+### 131. Is it possible to send payload in the GET and DELETE methods?
+
+No, the payload is not the same as the request parameters. Hence, it is not possible to send payload data in these methods.
+
+
+### 132. How can you test RESTful Web Services?
+
+RESTful web services can be tested using various tools like Postman, Swagger, etc. Postman provides a lot of features like sending requests to endpoints and show the response which can be converted to JSON or XML and also provides features to inspect request parameters like headers, query parameters, and also the response headers. Swagger also provides similar features like Postman and it provides the facility of documentation of the endpoints too. We can also use tools like Jmeter for performance and load testing of APIs.
+
+
+### 133. What is the maximum payload size that can be sent in POST methods?
+
+Theoretically, there is no restriction on the size of the payload that can be sent. But one must remember that the greater the size of the payload, the larger would be the bandwidth consumption and time taken to process the request that can impact the server performance.
+
+
+### 134. How does HTTP Basic Authentication work?
+
+While implementing Basic Authentication as part of APIs, the user must provide the username and password which is then concatenated by the browser in the form of “username: password” and then perform base64 encoding on it. The encoded value is then sent as the value for the “Authorization” header on every HTTP request from the browser. Since the credentials are only encoded, it is advised to use this form when requests are sent over HTTPS as they are not secure and can be intercepted by anyone if secure protocols are not used.
+
+
+### 135. What is the difference between idempotent and safe HTTP methods?
+
+    Safe methods are those that do not change any resources internally. These methods can be cached and can be retrieved without any effects on the resource.
+    Idempotent methods are those methods that do not change the responses to the resources externally. They can be called multiple times without any change in the responses.
+
+
+### 136. What are the key features provided by JAX-RS API in Java EE?
+
+JAX-RS stands for Java API for RESTful Web services. They are nothing but a set of Java-based APIs that are provided in the Java EE which is useful in the implementation and development of RESTful web services.
+
+Features of JAX-RS are:
+
+    POJO-based: The APIs in the JAX-RS is based on a certain set of annotations, classes, and interfaces that are used with POJO (Plain Old Java Object) to expose the services as web services.
+    HTTP-based: The JAX-RS APIs are designed using HTTP as their base protocol. They support the HTTP usage patterns and they provide the corresponding mapping between the HTTP actions and the API classes.
+    Format Independent: They can be used to work with a wide range of data types that are supported by the HTTP body content.
+    Container Independent: The APIs can be deployed in the Java EE container or a servlet container such as Tomcat or they can also be plugged into JAX-WS (Java API for XML-based web services) providers.
+
+
+
+### 137. Describe Ajax.
+Asynchronous JavaScript and XML (AJAX) is a technique that uses XMLHttpRequest objects to update web pages asynchronously by exchanging a small amount of data with the server, update the page without page reload. It is a front-end tool that communicates with the back-end server from the browser.
+### 138. List Ajax features.
+
+    High performing web pages and user-friendly features like autocomplete suggestions
+    Help in Template rendering at the client-side
+    Client component declarative instantiation
+    Use of Observer pattern on JavaScript arrays and objects
+    Invoke ADO.Net data contexts and services
+    Assists in Data View control and binding live data
+
+### 139. List advantages of using Ajax in web development
+
+    Ajax reduces latency-response time in both Request/Response.
+    XMLHttpRequest object in Ajax is highly responsive in data transfer in specific areas without page reload.
+    Asynchronous calls to Server prevent client’s wait for data before rendering.
+    Form validation is instant using Ajax.
+    Bandwidth use is reduced when Ajax is used in fetching and storing data from the database in the background without page reload.
+
+### 140.  What are the limitations of Ajax?
+
+    Ajax is not advisable in developing web applications but is great for websites.
+    View page source display code is written in Ajax exposing the functionality.
+    It is complex, less secured, needs more time in developing web pages.
+    Search engines cannot index pages developed using Ajax as Crawlers cannot identify web applications developed in JavaScript and Ajax.
+    XMLHttpRequest object can only fetch information from the server where pages are hosted but cannot fetch information from another server.
+    It is not possible to bookmark pages developed in Ajax.
+    Ajax cannot function with JavaScript disabled in the browser.
+    It has a slow response time because different page controls load at different times.
+    Dynamic page registration of its own on browser history engine is not possible, the code-behind file function does not work.
+
+### 141. List Ajax frameworks.
+
+    JavaScript frameworks like jQuery, MooTools, Prototype, YUI library, Dojo, AngularJS, Webix, GWT (Google Web Toolkit)
+    Java frameworks like Apache Wicket, JSF (Java Server Faces), RichFaces, ICEfaces, PrimeFaces
+    Windows .NET platform offers ASP.NET AJAX
+    Python framework such as Pyjs.
+    Ruby framework like Ruby on Rails
+
+### 142. Explain the working of Ajax.
+Ajax with XMLHttpRequest object communicates with a server, renders data on a portion of a webpage without page reload.
+
+List of steps that take place while working at Ajax are:
+
+    The user request is sent to the server from the browser.
+    JavaScript calls XMLHttpRequest object.
+    The server interacts with the database using ASP.Net, JSP, or PHP.
+    Data is fetched.
+    XMLHttpRequest callback receives XML or JSON data from server.
+    The browser displays HTML and CSS data on a particular portion of the page without page reload.
+
+### 143. What are the security threats that prevail with Ajax code?
+
+    Ajax request calls are in plain text format, resulting in insecure access to the database.
+    Data retrieved gets stored on the client browser so anyone can view it.
+    It makes monitoring browser sessions with help of a script.
+    Entire Ajax code can be seen using view page source, hackers can misuse this code in a cyber attack.
+
+### 144. What is XMLHttpRequest?
+
+XMLHttpRequest is an API that has methods and properties used by various scripting languages such as JavaScript, VBScript for manipulating and transferring XML data using HTTP protocol connecting client and server.
+
+Various formats supported by XMLHttpRequest for data transfer are XML, JSON, plain text, and even binary content. XMLHttpRequest object help update parts of the webpage without reloading the page. It recognizes events that occur during the processing of the request.
+
+### 145. List various properties of XMLHttpRequest.
+
+    onreadystatechange – For every state changes event gets fired by event handler.
+    readyState – Defines current state of XMLHttpRequest
+    responseText – Response is returned as string.
+    responseXML – Response is returned as XML in XML document object and parsed using DOM tree properties and methods.
+    status – status is returned as number. Example: 404 for “Not Found” 200 for “OK”
+    statusText – status is returned as text. Example: “Not Found” or “OK”
+
+### 146. Describe various methods used in XMLHttpRequest
+
+    abort() – Used to cancel current request.
+    getAllResponseHeaders() – Set of all the HTTP headers are returned as a string.
+    getResponseHeader(header_name) – Returns specific HTTP header value.
+    open(method,URL) – Various HTTP parameters such as GET, POST, HEAD, PUT and DELETE can be used as method. URL is the location of page on server where request should be sent.
+    send(content) – Used to send the request to the server.
+    setRequestHeader(label, value) – label-value pair is added to HTTP header to be sent.
+
+### 147. Explain various ways open() method can be used for XMLHttpRequest.
+Open() method of XMLHttpRequest object help to initialize new request or existing request. The parameters it uses contains request method, URL and other optional attributes.
+
+    open ( method, URL )
+    The value for the method parameter can be “GET”, “POST”, or “HEAD”. “PUT” and “DELETE” are some methods used in RESTful requests.
+    URL is the string that has the path of HTTP server path for sending a request.
+    open (method, URL, async)
+    async – specifies if the request send should be handled asynchronously or not at the server. If the value of async is true, it means that after send() method the script processing should not wait for a response, false will mean the script will wait for a response before continuing for script process.
+    open (method, URL, async, userName)
+    username is optional for authentication. Its default value is null.
+    open (method, URL, async, userName, password)
+    password is optional for authentication. Its default value is null.
+
+### 148. Explain Ajax callback function.
+
+    Client browser sends a request message to Server.
+    The user is free to do anything other than waiting for the response as the request call is asynchronous in nature.
+    The server receives the message and processes the page for which Ajax callback is called.
+    The response is sent to the browser as a JavaScript code string that gets executed in the browser.
+
+### 149. List the steps to improve Ajax performance
+
+    Limiting Ajax requests to a minimum
+    A wise selection of events that triggers Ajax request
+    Optimum use of GET request
+    Minimize data amount transmission
+    Use Caching to secure data
+
 
 
 
