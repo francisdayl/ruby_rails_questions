@@ -1,6 +1,6 @@
 import pyperclip
 
-listado_str = "\n".join([f'\n### {i}. ' for i in range(1,150)])
+listado_str = "\n".join([f'\n### {i}. ' for i in range(190,250)])
 
 print(listado_str)
 

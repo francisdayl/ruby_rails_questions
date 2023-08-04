@@ -1303,6 +1303,520 @@ Open() method of XMLHttpRequest object help to initialize new request or existin
 
 
 
+### 150. Describe events and their types in Ajax
+When the user or browser interacts with HTML elements, it is termed an event.
+Some examples of events are:
+
+- onchange – When elements are changed like the text is changed or inserted into the text field.
+- onclick – HTML elements like button, image, link are clicked.
+- onload – Loading a page completed by the browser.
+- onmouseover – When a user moves the mouse over HTML elements like image or text.
+
+Ajax events are of two types: Local events and Global events
+
+- Local events – Acts as callbacks inside Ajax request object
+- Examples: beforeSend, error, complete, success
+- Global events – triggered on document and calls listening event handlers
+- Examples: ajaxSend, ajaxSuccess, ajaxError, ajaxComplete
+
+### 151. List Ajax controls in ASP.Net
+
+- Timer
+- UpdatePanel
+- UpdateProgress
+- ScriptManager
+- ScriptManagerProxy
+
+### 152. How to call Ajax from JavaScript?
+There are many ways to call Ajax in JavaScript for submitting data to the server, checking username, creating a chat room, autocomplete form, vote or rate the product.
+- XMLHttpRequest object
+- Fetch API 
+- jQuery – It is a client-side JavaScript library
+### 153. What is ASP.NET
+ASP.NET is an open source web framework, created by Microsoft, for building modern web apps and services with .NET.
+
+### 154. List the tools to debug Ajax applications.
+
+    MyEclipse Ajax Tools
+    Script Debugger
+    JavaScript HTML Debugger
+    Fiddler for IE (Internet Explorer)
+    Firebug for Mozilla Firefox
+
+### 155. Describe the use of Cache false in Ajax call.
+Ajax requests are always issued by default, but browsers may send responses from their cache. In order to prevent this, the cache is set to false. Cache: false can be applied to prevent caching of all future Ajax requests, irrespective of jQuery method used.
+
+The code used for all Ajax functions is as below:
+
+- $.ajaxSetup({cache:false});
+
+### 156. How would you identify the completion of Ajax’s request?
+In order to complete the Ajax request, the condition should be as below:
+
+ReadyState property that defines current state of XMLHttpRequest if equals to four (xmlhttp.readyState == 4 && xmlhttp.status ==200) then data is available and Ajax request will be complete.
+
+
+### 157.  Explain the importance of client-side libraries
+Client side libraries are similar to ASP.Net programming model,
+
+    Handles browser compatibility issues by themselves.
+    Make asynchronous request calls over XMLHTTP.
+
+### 158. What are the methods for cross domain Ajax calls?
+
+There are two methods to transfer data between multiple security domains.
+
+These are:
+
+    CORS: Cross Origin Resource Sharing that works with HTTP web browsers
+    JSONP: JSON with padding that works with legacy browsers and HTTP GET method.
+
+
+### 159. Describe Ajax Control Toolkit
+Ajax Control Toolkit extends ASP.Net control functionalities. JavaScript code is used by Ajax Control Toolkit to enhance the capabilities for ASP.Net controls. ASP.Net Ajax control toolkit offers an infrastructure to write customizable, reusable, and extensible extenders and controls used to create an interactive web experience.
+### 160. List the protocols used by Ajax
+Following are the protocols that Ajax uses:
+
+    JSON – For communication between client and server
+    UED or URL encoded data
+    HTTP’s GET or POST methods
+    XMLHttpRequest that place a request with webserver
+
+### 161. When should we use Ajax GET request and Ajax POST request?
+Use of HTTP GET or POST methods by Ajax depends on particular scenarios.
+
+These are:
+
+    When data for the given URL requested does not change, the HTTP GET request should be used by Ajax.
+    HTTP POST is used for consistent web application architecture and for the updated state on the server.
+
+### 162. What is SOAP?
+
+SOAP means Simple Object Access Protocol is a type of communication protocol, a way to structure data prior to transmitting it and is based on XML standard.  It is developed to enable communication between applications of different platforms and programming language via internet.  It can use the range of protocols such as FTP, HTTP, SMTP, Post office protocol 3(POP3) to carry documents. In other words, it is an XML based protocol to transfer between computers.
+
+### 163. What are the elements of SOAP message structure?
+
+It is an ordinary XML document that contains the elements as a SOAP message
+
+    Envelope: It defines the start and end of the message
+    Header: It is an optional element. Contains information about the message being sent
+    Body: It contains the XML data comprising the message being sent
+    Fault: It provides the information about errors occurred while processing the message
+
+
+### 164. Mention what is the difference between JSON and SOAP?
+
+JSON is standard to represent human readable data. SOAP is a protocol requirement for transmitting information and calling web-services using XML.
+
+### 165. Mention what is the major obstacle faced by the users using SOAP?
+
+The major obstacle faced by the users using SOAP is a firewall security mechanism.  This lock all the ports leaving few like HTTP port 80 and the HTTP port used by SOAP that bypasses the firewall. The technical complaints against SOAP is that it mixes the specification for message transport with the specification for message structure.
+
+### 166. Mention what is the message format used in SOAP?
+
+Message format is written by using the XML language. The message format is standard, and it is widely used. The message format is like
+
+```
+POST/InStock HTTP/1.1
+Host: localhost (www.xyz.org)
+Content Type: application/soap+xml; charset=utf-8
+Content length: 300
+SOAPAction:http://www.guru99.org/2003/05/soap-envelop>
+<?xml version= “1.0”?>
+<soap:Envelop xmlns:soap= http://www.guru99.org/2003/05/soap-envelop>
+<soap:Header>
+</soap:Header>
+<soap:Body>
+<m:CareerName>Guru99</m:CareerName>
+</soap:Body>
+</soap:Envelope>
+```
+
+### 167. Mention what is the response format for SOAP response?
+
+SOAP response would be like
+```
+
+HTTP/1.0 200 OK
+Content Type: text/xml; charset=utf-8
+Content-Length: nnn
+<?xml version= “1.0”?>
+<SOAP-ENV:Envelop
+xmlns: SOAP-ENV= http://www.guru99.org/2003/05/soap-envelope”
+SOAP-ENV: encoding style= http://www.guru99.org/2003/05/soap-encoding>
+<SOAP-ENV: Body xmlns:m=http://www.xyz.org/quotation”>
+<m:GetQuotationResponse>
+<m:Quotation > Here is the Quotation</m:Quotation>
+</m:QuotationRequest>
+</SOAP-ENV:Body>
+</SOAP-ENV: Envelope>
+
+```
+### 168. Mention what is SOAP HTTP Binding?
+
+HTTP works over TCP/IP. The HTTP client links to an HTTP server using TCP.  SOAP HTTP is a method that conforms with the SOAP encoding rules.
+
+HTTP + XML = SOAP
+
+A SOAP request could be an – HTTP GET request or HTTP POST
+
+The HTTP POST request mentions atleast two HTTP headers: Content-Type and Content-Length
+
+### 169.  Mention what are the syntax rules for SOAP message?
+
+    SOAP message must use encoded XML
+    A SOAP envelope namespace must be used
+    A SOAP encoding namespace must be used
+    A SOAP message must not consist of a DTD reference
+    A SOAP message must not have XML processing instruction
+
+
+### 170. Mention what is the difference between SOAP web service and RESTful web service?
+
+- **SOAP:** In SOAP, communication between the client and web service happens using XML message. It specifies the communication rules like what are all the tags that should be used in XML and their meaning
+- **RestFul:** It uses architecture which use HTTP or similar protocols by restricting the interface to use standard operations like GET, PUT, POST, DELETE for HTTP.
+
+
+### 171. Explain how user use the facilities that are provided by SOAP?
+
+- PutAddress(): It is used to  enter an address in the webpage.  It carries address instance on the SOAP call
+- PutListing(): It is used to enable the insertion of a complete XML document into the webpage.  It receives the XML file as an argument and transport the XML file to XML parser liason, which reads it and puts it as a parameter in the SOAP call
+- GetAddress(): It is used to determine a query name and retrieves the result that is best matched with a query.  In the form of text string, the name is sent to the SOAP call
+- GetAllListing(): It is used to return the complete list in an XML format.
+
+
+### 172. Mention what is the transport method in SOAP?
+
+Application layer and transport layers of a network are used by SOAP. HTTP and SMTP are the valid application layer protocol used as transport for SOAP.  HTTP is more preferable as it works well with current internet infrastructure especially with firewalls. The SOAP requests can be sent via an HTTP GET method while the specification includes details on HTTP POST only.
+
+
+### 173. Mention what is the end point in web services?
+
+IP address of the server where the web services are running is the end point in web services.
+
+### 174. Explain what is SOAP envelop element?
+
+A SOAP envelop indicates the start and end of the message, so that the receiver knows when an entire message has been received.  In other words, a SOAP envelop is a packaging mechanism.
+
+
+### 175. List out important characteristics of a SOAP envelop element?
+
+The characteristic of SOAP element is
+
+    SOAP message has a root Envelope element
+    Envelope is a mandatory part of SOAP message
+    If an Envelope contains a header element, it should not contain more than one. Also, it should appear as the first child of the Envelope
+    When SOAP version changes envelop version also changes
+    SOAP envelope is specified by prefix ENV and Envelope element
+    The optional SOAP encoding is also specified using a namespace and the optional encodingstyle element
+
+
+### 176. Mention what is the difference between a web service and SOA?
+
+SOA is a software design principle and an architectural pattern for implementing loosely coupled, reusable and coarse grained services.  Using any protocols such as HTTP, HTTPS, JMS, SMTP, etc. you can implement SOA. The message can be in Data Transfer Objects or in XML. While web service is an implementation technology and one of the ways to implement SOAP.
+
+### 177. Why is the Web API important?
+
+Web API is generally considered as a service that basically provides us information or data from the server. It is very important because of the following reasons:
+
+    It is used to provide an interface for websites and client applications to have access to data.
+    It can also be used to access data from the database and save data back to the database.
+    It supports different text formats such as XML, JSON, etc.
+    It is suitable or compatible with any type of browser and any type of device like mobile, desktop, web, etc.
+    It uses low bandwidth such as XML or JSON data, etc., and is therefore considered good for devices that have limited bandwidth such as smartphones, etc.
+    From a business point of view, web API is more applicable for UI/UX, increases interest in the company’s product and services, increases website traffic.
+
+
+### 178. What is Web API and why we use it ?
+
+Web API (Application Programming Interface), as the name suggests, is an API that can be accessed over the Web using the HTTP protocol. It is basically considered the best platform for revealing or uncovering data and services to various different services. It is a tool that can be used to push data to a server and can be accessed by server code. It can be built or developed using various technologies like java, ASP.NET, etc. 
+Web API Uses:
+
+    It contains additional layers that simply standardize communications and provide different options on how to format input and output.
+    It can be used with ASP.NET MVC and different types of web applications such as ASP.NET WebForms.
+    If one wants to create resource-oriented services, then Web API services are considered the best.
+    It also helps to develop REST-ful services and SOAP-based services.
+
+
+
+### 179. What are the main return types supported in Web API?
+
+It does not have any specific data type. It can return data of any type depending upon the business requirement. There are many HTTP methods like GET, POST, PUT, etc., which can return data in different formats depending upon the use case. 
+
+
+### 180. What is the difference between Web API and WCF?
+
+WCF (Windows Communication Foundation): It is a framework used for developing SOAP (Service-oriented applications). This framework is used for developing, configuring, and deploying, or implementing network-distributed services. 
+
+Web API: It is an application programming interface for both web browsers and web servers. Browser API simply extends or increases the functionality of web browsers whereas Server API simply extends or increases the functionality of web server.
+
+### 181. Why to choose Web API over WCF?
+
+Web API is considered the best choice over WCF because of the following reasons:
+
+    Web API uses all features of HTTP such as URIs, request/response headers, caching, versioning, various content formats, etc.
+    One does not have to define or explain any extra config setting for different devices in Web API.
+    Web API uses different text formats including XML because of which it is faster and more preferred for lightweight services.
+    Web API also supports MVC features whereas WCF does not support MVC features.
+    Web API provides more flexibility as compared to WCF.
+    Web API uses standard security like token authentication, basic authentication, etc., to provide secure service whereas WCF uses WS-I standard to provide secure service. 
+
+
+
+### 182. What is different between REST API and RESTful API?
+
+- REST (Representation State Transfer) API:  It is basically an architectural style that makes productive use of existing technology and protocols of the web. It is a set of rules that developers need to follow when they develop their API or services that are scalable. It is used with HTTP protocol using its verbs such as GET, DELETE, POST, PUT. 
+- RESTful API: It is simply referred to as web services executing such as architecture.  
+
+### 183. What are the advantages of using Rest in Web API?
+
+REST is very important and beneficial in Web API because of the following reasons:
+
+    It allows less data transfer between client and server.
+    It is easy to use and lightweight.
+    It provides more flexibility.
+    It also handles and controls various types of calls, returning various data formats.
+    It is considered best for using it in mobile apps because it makes less data transfer between client and server.
+    It uses simple HTTP calls for inter-machine communication rather than using more complex options like CORBA, COM+, SOAP, or RPC.
+
+### 184. What is REST and SOAP? What is different between them?
+
+REST (Representational State Transfer):  It is a new and improved form of web service. It describes the architectural style of networked systems. It does not require greater bandwidth when requests are sent to the server. It just includes JSON message. For example:
+
+### 185. What is Web API 2.0?
+
+It is basically an enhanced and modified feature of Web API. This new version supports various new features as given below:
+
+    New Routing Attribute
+    Secure ASP.NET Web API using OAuth 2.0
+    Support for Cross-Origin requests using CORS
+    IHttpActionResult return type
+    Support for $expand, $select in OData Service
+
+Because of all the new features of Web API 2.0, it is considered an optimal choice and suitable development model that makes it easier to develop RESTful services interfaces to different clients running on various platforms. It also supports configuring routes in the Web API method or controller level.
+
+
+### 186. Explain media type formatters.
+
+In web API, media type formatters are classes that are responsible for serialization data. Here, serialization generally means a process of translating data into a format that can be transmitted and reconstructed later.  Because of serializing request/response data, Web API can understand request data format in a better way and send data in a format that the client expects. It simply specifies data that is being transferred among client and server in HTTP response or request. 
+
+### 187. Web API supports which protocol?
+
+Web API generally supports only HTTP protocol. 
+
+
+### 188. Which of the following Open-source libraries is used by WEB API for JSON serialization?
+
+Json.NET library is generally used by Web API for JSON serialization. 
+
+
+### 189. What is XML and JSON?
+
+XML (Extensible Markup Language): 
+
+    It is especially designed to store and transport data.
+    It is similar to HTML but is more flexible than HTML because it allows users to create their own custom tags.
+    It is used for representing structured information such as documents, data, configuration, etc.
+
+
+JSON (JavaScript Object Notation): 
+
+    It is a lightweight format designed to store and transport data.
+    It is easier to understand and is a standard text-based format used for representing structured data based on JavaScript object syntax.
+    It is faster and easier to use. 
+
+
+
+
+### 190. What are Web API filters?
+
+Filters are basically used to add extra logic at different levels of Web API framework request processing.  Different types of Web API filters are available as given below:
+
+    Authentication Filter: It handles authentication and authenticates HTTP requests. It also helps to authenticate user detail. It checks the identity of the user.
+    Authorization Filter: It handles authorization. It runs before controller action. This filter is used to check whether or not a user is authenticated. If the user is not authenticated, then it returns an HTTP status code 401 without invoking the action.
+    AuthorizeAttribute is a built-in authorization filter provided by Web API.
+    Action Filter: It is attributing that one can apply to controller action or entire controller. It is used to add extra logic before or after controller action executes. It is simply a way to add extra functionality to Web API services.
+    Exception Filter: It is used to handle exceptions that are unhandled in Web API. It is used whenever controller actions throw an unhandled exception that is not HttpResponseException. It will implement an “IExceptionFilter” interface.
+    Override Filter: It is used to exclude specific action methods or controllers from the global filter or controller level filter. It is simply used to modify the behavior of other filters for individual action methods. 
+
+
+### 191. Who can consume Web API?
+
+A large range of clients such as browsers, mobile devices, iPhone, etc., include or consume web API. It is also good for using along native applications that require web services but not SOAP support. It can also be consumed by any client that supports HTTP verbs such as GET, DELETE, POST, PUT.
+
+
+### 192. How to handle errors in Web API?
+
+Web API generally provides greater flexibility in terms of handling errors. Exception handling is a technique that is used to handle run-time errors in application code. One can use HttpResponseException, HttpError, Exception filters, register exception filters, Exception handlers to handle errors. Exception filter can be used to identify unhandled exceptions on actions or controllers, exception handlers can be used to identify any type of unhandled exception application-wide, and HttpResponseException can be used when there is the possibility of an exception. 
+
+
+### 193. How to register an exception filter globally?
+
+One can register exception filter globally using following code:
+GlobalConfiguration.Configuration.Filters.Add (new MyTestCustomerStore.NotImplExceptionFilterAttribute());
+ 
+
+
+### 194. What is MVC? Write difference between MVC and Web API?
+
+MVC (Model, View, and Controller) is basically an application design model that comprises three interconnect parts I.e., model, view, and controller. It allows coders to factor out different components of the application and update them more easily. It is mostly used for developing model user interfaces. Its main purpose is to display patterns in structure for keeping display and data separate to enable both of them to change without affecting others. 
+
+### 195. Difference between HTTP GET vs HTTP Post?
+
+HTTP (HyperText Transfer Protocol) simply manages request-response between client and server. It works as a request-response protocol between client and server. 
+
+HTTP GET: This method is used to get information or data from a respective server at a specified URL.
+
+Example: 
+GET/RegisterStudent.asp?user=value1&pass=value2
+
+HTTP POST: This method is used to send data or information to respective servers. 
+
+### 196. What is CORS in Web API?
+
+CORS (Cross-Origin Resource Sharing) is basically a mechanism that allows one to make requests from one website to another website in a browser that is normally not allowed by another policy called SOP (Same Origin Policy). It supports secure cross-origin requests and data transfers among clients or browsers and servers. Here, cross-origin request means requests coming from different origins. CORS simply resolves the same-origin restriction for JavaScript. One can enable CORS for web API using the respective web API package or OWIN middleware. 
+
+### 197. Name method that validates all controls on page?
+
+Page.Validate()
+
+
+### 198. What parameters can be passed in the URL of API?
+
+Context keys, documents keys, or anything that initiates API to hit the exact end-point are few parameters that one can pass in the URL to define the complete end-point.  
+
+
+### 199. Explain what GraphQL is? Does it belong under database technology?
+While this may seem like a fundamental GraphQL interview question, you can make the answer interesting by adding your personal experience with the language.
+
+GraphQL is a query language invented by Facebook in 2012 that offers a standard interface for data retrieval and modification between the client and the server. The client uses queries to request data from the GraphQL server. Client-specified inquiries are those in which the answer format is described in the query and determined by the client rather than the server.
+
+As opposed to standard REST APIs, the data structure is not hardcoded, making data retrieval from the server more efficient for the client.
+
+GraphQL is frequently misunderstood as database technology; however, this is a widespread misunderstanding. GraphQL is an API query language. In that respect, it's database agnostic, meaning it can work with any database or perhaps none at all.
+### 200. How does GraphQL utilize the data loading process?
+When users use GraphQL to request data, it merely retrieves the least amount of data necessary by the client. Even if the object model has a large number of fields, the client can only request the required fields.
+### 201. Where do you use GraphQL and why?
+These types of GraphQL interview questions explicitly seek your working experience with the language. Dig into all your experience and share the best examples.
+
+Where your customer requires a flexible answer style to prevent multiple queries and extensive data transformation with the burden of keeping them in sync, GraphQL comes in handy.
+
+Using a GraphQL server, a client-side developer may easily alter the return format without affecting the backend.
+
+You may describe the essential data more naturally with GraphQL. It can speed up development since the needed data is more comparable to your component structure in application architectures like top-down rendering in React.
+### 202. What are the key concepts of GraphQL?
+GraphQL has some key concepts. They are:
+
+    Hierarchical
+    Product-centric
+    Strong-typing
+    Client-specific queries
+    Introspective
+
+### 203. List down the primary operations that GraphQL supports.
+The three sorts of operations supported by GraphQL are query, mutation, and subscription. The request is made using the query, which is a read action; mutation is used for write operations, and subscription is used to listen for any data changes. If the client is subscribed to that event, the server sends a notification message to the client whenever data changes.
+### 204. What is the main difference between REST and GraphQL?
+The most significant distinction between REST and GraphQL is that GraphQL does not deal with specific resources. Everything, in GraphQL, is viewed as a graph, which is linked and may be searched to meet the demands of the app.
+### 205. How can you do server-side caching in GraphQL?
+This is an example of a GraphQL interview question that assesses your detail orientation.
+
+The difficulty of maintaining server-side caching is still an area of concern with GraphQL, especially when compared to REST. It's simple to cache data for each endpoint with REST because the data format is guaranteed not to change.
+
+With GraphQL, on the other hand, it's impossible to predict what a client will want next; thus, a cache layer sitting behind the API makes little sense. Therefore, server-side caching in GraphQL remains a hurdle.
+### 206. What do you understand by AST in GraphQL?
+A query to be processed by a GraphQL server usually comes in as a single String. Therefore, this string must be tokenized (divided into meaningful substrings) and processed into a machine-readable form. An abstract syntax tree, or AST, is the name for this form.
+
+When GraphQL processes a query, it walks through the tree, executing each component against the schema. Every compiler, from C++ to Chrome's JavaScript VM to Babel, starts by converting raw strings to an AST.
+### 207. What is Fragment in GraphQL?
+When the query in GraphQL is huge and contains reusable components, the fragment is utilized. You may utilize the reusable portion to construct a fragment, which you can then use in the query. The notion of the fragment was created to make it easy to organize code and reduce duplication.
+### 208. Can we use inheritance with GraphQL input types?
+No, input types are not allowed to implement inheritance. In addition, the GraphQL type system does not support inheritance (the extends keyword adds fields to an existing type, not inheritance).n we use inheritance with GraphQL input types?
+
+### 209. What is gRPC?
+
+gRPC is a high performance, open source RPC framework that can run in any environment. It is used to build distributed applications and microservices.
+
+### 210. How does the client-server communication model work in gRPC?
+
+In gRPC, the client-server communication model is based on the concept of a remote procedure call (RPC). With RPC, a client can send a request to a server and the server can execute a procedure and return a response to the client, all without the client needing to know any details about the server or the procedure.
+
+### 211. Can you explain what a stub class is?
+
+A stub class is a class that contains the methods and data that are needed to make a remote procedure call (RPC). When an RPC is made, the client makes a call to a method on the stub class. The stub class then makes a call to the server, which contains the actual implementation of the method.
+
+### 212. Can you name some of the main advantages of using gRPC over REST?
+
+gRPC has a number of advantages over REST, including better performance, lower latency, and more efficient data compression. gRPC is also better suited for use in distributed systems, since it uses a more efficient binary protocol that is less susceptible to network issues.
+
+### 213. What’s the difference between gRPC and REST?
+
+gRPC is a newer technology that uses a binary protocol and focuses on performance, while REST uses a text-based protocol and is more flexible. gRPC is generally faster and more efficient, but REST is more widely adopted and easier to use.
+
+### 214.  Is it true that gRPC supports multiple languages, including C++, Java, Python, Go, Ruby, NodeJS, Objective-C and PHP?
+
+Yes, that is correct. gRPC supports a wide variety of programming languages, making it a versatile tool for building distributed applications.
+
+### 215. When should you use gRPC instead of other messaging systems like AMQP or MQTT?
+
+gRPC is a great choice for any application that needs low latency, high performance communication. gRPC is also a good choice if you need to support multiple languages or platforms, as it has excellent language interoperability.
+
+### 216. Are there any disadvantages to using gRPC? If yes, then what are they?
+
+There are a few potential disadvantages to using gRPC. First, it can be difficult to debug because it uses binary encoding. This can make it hard to read the data that is being passed back and forth. Additionally, gRPC can be less compatible with some legacy systems. Finally, gRPC services can be more difficult to load balance than traditional web services.
+
+### 217. What do you understand about bidirectional streaming in gRPC?
+
+In gRPC, bidirectional streaming allows for full duplex communication – meaning that both the client and server can send and receive data at the same time. This is in contrast to unidirectional streaming, where data can only flow in one direction.
+
+### 218. Why is gRPC faster than REST APIs?
+
+gRPC is faster than REST APIs because it uses a binary protocol that is optimized for data serialization. This means that less data needs to be transferred over the network, which results in a faster overall performance.
+
+### 219. What is protobuf?
+
+Protobuf is a language-neutral, platform-neutral, extensible way of serializing structured data for use in communications protocols, data storage, and more.
+
+### 220. What are the different types of calls supported by gRPC?
+
+There are four different types of calls that are supported by gRPC. These are unary, server streaming, client streaming, and bidirectional streaming. Unary calls are the most basic, and involve a single request and response. Server streaming calls involve a single request but multiple responses from the server. Client streaming calls involve multiple requests from the client but a single response from the server. Bidirectional streaming calls involve multiple requests and responses from both the client and the server.
+
+### 221. Which one would you prefer: HTTP/1.1 or HTTP/2? Why?
+
+There is no clear answer as to which one is better. It depends on the specific use case. HTTP/1.1 is the more traditional protocol and is more widely supported. HTTP/2 is newer and has some advantages in terms of speed and efficiency.
+
+### 222. What is HTTP/2? How is it different from HTTP 1.x?
+
+HTTP/2 is a newer version of the HTTP protocol that was designed to address some of the shortcomings of HTTP 1.x. One of the biggest differences is that HTTP/2 uses a multiplexing technique that allows multiple requests to be sent over a single connection, which can lead to faster page loading times. HTTP/2 also uses binary encoding, which is more efficient than the text-based encoding used in HTTP 1.x, and introduces header compression to reduce the size of data that needs to be sent.
+
+### 223. What are some best practices for using gRPC?
+
+There are a few best practices to keep in mind when using gRPC:
+
+-Keep your message types small and focused
+-Avoid using gRPC for one-off requests
+-Batch requests together whenever possible
+-Use protobufs to define your message types
+-Use the gRPC gateway for external access to your gRPC services
+
+### 224. What are the differences between Thrift and gRPC?
+
+Thrift is a software framework for developing RPC services. gRPC is a modern open source RPC framework that uses HTTP/2 as its transport layer. gRPC is also based on the Google Protocol Buffers serialization format, while Thrift uses its own binary format. gRPC services are typically written in Google’s Go programming language, while Thrift services can be written in any language.
+
+### 225. What are the different ways in which you can implement authentication with gRPC?
+
+There are a few different ways that you can implement authentication with gRPC. One way is to use SSL/TLS, which will encrypt all of the data that is being sent between the client and the server. Another way is to use a Google API key, which will authenticate the client with the server. Finally, you can also use OAuth2, which is a standard authentication protocol that is often used with gRPC.
+
+### 226. Is it possible to combine HTTP/1.1 and HTTP/2 on the same port?
+
+Yes, it is possible to combine HTTP/1.1 and HTTP/2 on the same port. This can be done by using a reverse proxy, such as NGINX, which can terminate HTTP/1.1 and HTTP/2 connections on the same port.
+
+### 227.  What are the key features of HTTP/2?
+
+The key features of HTTP/2 are multiplexing, header compression, and server push. Multiplexing allows for multiple requests to be sent over a single connection, which can help reduce latency. Header compression can help reduce the size of data that needs to be sent over the connection, and server push allows the server to send data to the client even before the client has requested it.
+
+### 228. What are gRPC channels?
+
+Channels are the fundamental abstraction in gRPC. A channel provides a connection to a gRPC server on a specified host and port and is used when creating a client stub (or just “client” in some languages). Channels are safe for concurrent use by multiple goroutines and manage all underlying connections and state for you.
 
 ### 1. How would you design a social media app?
 For this question you'll typically be asked to design a specific app, such as Twitter, Instagram, etc. For this example, we’ll assume the interviewer asked you to design Twitter. Here are some considerations for answering this question: 
